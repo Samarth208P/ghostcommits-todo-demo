@@ -13,6 +13,18 @@ npm test
 
 Tasks are stored in `todos.json` in the current directory. This file is ignored by Git.
 
+## Quick verification
+
+Before changing tasks, run these commands from the repository directory:
+
+```sh
+node --version
+npm test
+npm start -- list
+```
+
+Use Node.js 22 or newer. The tests exercise task creation, completion, and invalid input handling. Listing tasks is read-only: it does not modify `todos.json`. If no saved tasks exist, it prints `No tasks yet.` without creating the file.
+
 ## Demo contribution
 
 A suitable first bounty is a documentation-only update to this README: add a quick verification section explaining how to check the Node version, run tests, and list tasks without changing saved data. Submit the change through the deployed GhostCommits application.
